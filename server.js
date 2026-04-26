@@ -17,5 +17,7 @@ db.query("SELECT 1")
   .catch(err => console.error("❌ DB Error:", err));
 
 sequelize.sync().then(()=>{
-  app.listen(5000, ()=>console.log("Server running PRO"));
+  app.listen(5000, "0.0.0.0", () => {
+  console.log("Server running PRO");
+});
 });
